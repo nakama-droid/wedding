@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview Concept V2 | Shofi Wedding Malang</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #C5A059;
+            --dark: #1A1A1A;
+            --light-grey: #F4F4F4;
+            --white: #FFFFFF;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+        body { font-family: 'Montserrat', sans-serif; color: var(--dark); line-height: 1.6; }
+
+        /* NAVBAR ANIMATION */
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 1000;
+            display: flex; justify-content: center; padding: 20px 0;
+            background: transparent; transition: 0.4s ease;
+        }
+
+        nav.sticky { background: rgba(255, 255, 255, 0.95); box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 10px 0; }
+
+        nav ul { display: flex; list-style: none; gap: 30px; }
+
+        nav ul li a {
+            text-decoration: none; color: var(--white); font-weight: 600;
+            font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        nav.sticky ul li a { color: var(--dark); }
+        nav ul li a:hover { color: var(--gold); }
+
+        /* HERO & HOME */
+        header {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070') center/cover;
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: var(--white);
+        }
+
+        .home-info { padding: 80px 15%; text-align: center; background: var(--light-grey); }
+        .home-info h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 20px; }
+
+        /* GALLERY & TESTIMONI */
+        .section-gallery { padding: 80px 10%; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top: 30px; }
+        .img-card { height: 400px; background-size: cover; background-position: center; border-radius: 4px; }
+
+        .testi-card { 
+            background: white; padding: 30px; border-radius: 8px; margin-top: 40px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: left;
+        }
+
+        /* STAR RATING ANIMATION (Playstore Style) */
+        .stars { display: flex; gap: 5px; color: #ddd; font-size: 1.5rem; cursor: pointer; margin: 10px 0; }
+        .stars span:hover, .stars span.active { color: #FFD700; transform: scale(1.2); transition: 0.2s; }
+
+        .dev-note { font-size: 0.75rem; color: #888; font-style: italic; margin-top: 10px; display: block; }
+
+        /* BOOKING SYSTEM */
+        .booking-section { padding: 80px 10%; background: var(--dark); color: white; text-align: center; }
+        .package-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 40px; }
+        .package-card { 
+            border: 1px solid var(--gold); padding: 30px; border-radius: 10px; 
+            transition: 0.3s; cursor: pointer;
+        }
+        .package-card:hover { background: var(--gold); color: var(--dark); }
+
+        .btn-wa { 
+            background: #25D366; color: white; padding: 15px 40px; border-radius: 50px; 
+            text-decoration: none; font-weight: bold; display: inline-block; margin-top: 40px;
+        }
+
+        footer { padding: 40px; text-align: center; font-size: 0.8rem; background: #111; color: #666; }
+    </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#booking">Booking</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <p style="letter-spacing: 5px;">CERTIFIED PROFESSIONAL MUA</p>
+        <h1 style="font-family: 'Playfair Display'; font-size: 4rem;">Shofi Wedding</h1>
+    </header>
+
+    <section class="home-info">
+        <h2>Kenapa Memilih Shofi Wedding?</h2>
+        <p>Berdasarkan dedikasi kami di Malang, kami menggabungkan teknik MUA Profesional yang bersertifikat dengan visi untuk membuat setiap pengantin merasa seperti ratu di hari bahagianya. Dengan 140rb+ followers, kepercayaan Anda adalah prioritas kami.</p>
+    </section>
+
+    <section class="section-gallery" id="gallery">
+        <h2 style="font-family: 'Playfair Display'; text-align: center; font-size: 2.5rem;">The Gallery</h2>
+        <div class="gallery-grid">
+            <div class="img-card" style="background-image: url('https://images.unsplash.com/photo-1594463750939-ebb28c3f7f75?q=80&w=2070');"></div>
+            <div class="img-card" style="background-image: url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2069');"></div>
+            <div class="img-card" style="background-image: url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1974');"></div>
+        </div>
+
+        <div class="testi-card">
+            <h4>"Hasil makeupnya awet dan gak pecah sama sekali!"</h4>
+            <div class="stars">
+                <span class="active">★</span><span class="active">★</span><span class="active">★</span><span class="active">★</span><span class="active">★</span>
+            </div>
+            <p>- Dinda, Wedding April 2026</p>
+            <span class="dev-note">💡 Fitur Ready: Sistem upload foto testimoni & rating bintang interaktif ala Playstore.</span>
+        </div>
+    </section>
+
+    <section class="booking-section" id="booking">
+        <h2 style="font-family: 'Playfair Display'; font-size: 2.5rem;">Sistem Booking Eksklusif</h2>
+        <p>Pilih paket yang sesuai dengan impianmu:</p>
+        
+        <div class="package-grid">
+            <div class="package-card">
+                <h3>Bronze</h3>
+                <p>Makeup Akad + Melati</p>
+            </div>
+            <div class="package-card">
+                <h3>Gold</h3>
+                <p>Akad & Resepsi + Touch up</p>
+            </div>
+            <div class="package-card">
+                <h3>Platinum</h3>
+                <p>All-in Wedding Organizer</p>
+            </div>
+        </div>
+
+        <span class="dev-note" style="color: #ccc; margin-top: 30px;">💡 Fitur Ready: Form custom sesuai kebutuhan klien. Klik booking otomatis akan mengirimkan detail paket & tanggal ke WhatsApp Admin Shofi Wedding.</span>
+
+        <a href="https://wa.me/6281335353810" class="btn-wa">HUBUNGI ADMIN VIA WHATSAPP</a>
+    </section>
+
+    <footer>
+        &copy; 2026 Concept Preview by Nakama_id untuk Shofi Wedding Malang
+    </footer>
+
+    <script>
+        // Sticky Navbar Effect
+        window.addEventListener("scroll", function() {
+            var nav = document.querySelector("nav");
+            nav.classList.toggle("sticky", window.scrollY > 50);
+        });
+
+        // Simple Star Animation Trigger
+        const stars = document.querySelectorAll('.stars span');
+        stars.forEach((star, index) => {
+            star.addEventListener('click', () => {
+                stars.forEach((s, i) => {
+                    i <= index ? s.classList.add('active') : s.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
